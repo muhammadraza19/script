@@ -10,13 +10,11 @@ pipeline {
         // Add more stages for your build and deployment process
          stage('Execute Shell Commands') {
             steps {
-                sh '''
-                scp /var/lib/jenkins/workspace/cronjob/url.sh raza@server:/home/raza
-                ssh raza@server
-                crontab <<EOF
-                */5 * * * * /home/raza/url.sh
-                EOF
-                '''
+                sh 'scp /var/lib/jenkins/workspace/cronjob/url.sh raza@server:/home/raza '
+                sh 'ssh raza@server'
+                sh 'crontab <<EOF'
+                sh '*/5 * * * * /home/raza/url.sh'
+                sh 'EOF'
             }
     }
 }
