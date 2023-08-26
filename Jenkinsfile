@@ -13,7 +13,7 @@ pipeline {
                 sh 'cd /var/lib/jenkins/workspace/cronjob/'
                 sh "scp url.sh raza@server:/home/raza"
                 sh 'ssh raza@server'
-                sh 'bash cron.sh'
+                sh './cron.sh'
             }
     }
 }
