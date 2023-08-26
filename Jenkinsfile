@@ -11,7 +11,7 @@ pipeline {
          stage('Execute Shell Commands') {
             steps {
                 sh 'cd /var/lib/jenkins/workspace/cronjob/'
-                sh "scp url.sh raza@server:/home/raza"
+                sh "scp url.sh raza@server:/home/raza "
                 sh 'ssh raza@server'
                 sh 'crontab <<EOF'
                 sh '*/5 * * * * /home/raza/url.sh'
