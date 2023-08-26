@@ -1,3 +1,3 @@
 # script
 url verification script
-The pipeline will be triggered fef3r
+The pipeline will be triggered 
